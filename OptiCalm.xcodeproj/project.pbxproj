@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2 /* OptiCalmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = R2 /* OptiCalmApp.swift */; };
+		B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = R3 /* AppDelegate.swift */; };
+		B4 /* BreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = R4 /* BreakManager.swift */; };
+		B5 /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = R5 /* OverlayWindowController.swift */; };
+		B7 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = R7 /* AppIcon.png */; };
+		BB68FD37307ED7CD00D5B69B /* OptiCalmMenuEye.png in Resources */ = {isa = PBXBuildFile; fileRef = BB68FD36307ED7CD00D5B69B /* OptiCalmMenuEye.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB68FD36307ED7CD00D5B69B /* OptiCalmMenuEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptiCalmMenuEye.png; sourceTree = "<group>"; };
+		P1 /* OptiCalm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptiCalm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		R2 /* OptiCalmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptiCalmApp.swift; sourceTree = "<group>"; };
+		R3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		R4 /* BreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakManager.swift; sourceTree = "<group>"; };
+		R5 /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
+		R6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		R7 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3 = {
+			isa = PBXGroup;
+			children = (
+				G1 /* OptiCalm */,
+				A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				P1 /* OptiCalm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G1 /* OptiCalm */ = {
+			isa = PBXGroup;
+			children = (
+				R2 /* OptiCalmApp.swift */,
+				R3 /* AppDelegate.swift */,
+				R4 /* BreakManager.swift */,
+				R5 /* OverlayWindowController.swift */,
+				R6 /* Info.plist */,
+				R7 /* AppIcon.png */,
+				BB68FD36307ED7CD00D5B69B /* OptiCalmMenuEye.png */,
+			);
+			path = OptiCalm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5 /* OptiCalm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6 /* Build configuration list for PBXNativeTarget "OptiCalm" */;
+			buildPhases = (
+				S1 /* Sources */,
+				F1 /* Frameworks */,
+				R1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OptiCalm;
+			productName = OptiCalm;
+			productReference = P1 /* OptiCalm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = A2 /* Build configuration list for PBXProject "OptiCalm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3;
+			productRefGroup = A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5 /* OptiCalm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7 /* AppIcon.png in Resources */,
+				BB68FD37307ED7CD00D5B69B /* OptiCalmMenuEye.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2 /* OptiCalmApp.swift in Sources */,
+				B3 /* AppDelegate.swift in Sources */,
+				B4 /* BreakManager.swift in Sources */,
+				B5 /* OverlayWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OptiCalm/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.OptiCalm;
+				PRODUCT_NAME = OptiCalm;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OptiCalm/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = local.OptiCalm;
+				PRODUCT_NAME = OptiCalm;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2 /* Build configuration list for PBXProject "OptiCalm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1 /* Debug */,
+				C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6 /* Build configuration list for PBXNativeTarget "OptiCalm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3 /* Debug */,
+				C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1 /* Project object */;
+}
