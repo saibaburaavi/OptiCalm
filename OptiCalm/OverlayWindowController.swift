@@ -38,10 +38,14 @@ final class OverlayWindowController: NSWindowController {
         let container = NSView(frame: NSRect(origin: .zero, size: screen.frame.size))
         container.autoresizingMask = [.width, .height]
 
-        let eye = NSTextField(labelWithString: "◉")
-        eye.font = .systemFont(ofSize: 54, weight: .medium)
-        eye.textColor = .white
-        eye.alignment = .center
+
+        let eye = NSImageView()
+        if let eyeImage = NSImage(named: "OptiCalmMenuEye")?.copy() as? NSImage {
+            eyeImage.isTemplate = true
+            eye.image = eyeImage
+        }
+        eye.contentTintColor = .white
+        eye.imageScaling = .scaleProportionallyUpOrDown
         eye.translatesAutoresizingMaskIntoConstraints = false
 
         let title = NSTextField(labelWithString: "Look 20 feet away")
@@ -61,12 +65,17 @@ final class OverlayWindowController: NSWindowController {
         seconds.alignment = .center
         seconds.translatesAutoresizingMaskIntoConstraints = false
 
+        // White button with black text
         let skipButton = NSButton(title: "Skip Break", target: self, action: #selector(skipBreak))
-        skipButton.bezelStyle = .rounded
         skipButton.controlSize = .large
-        skipButton.font = .systemFont(ofSize: 18, weight: .semibold)
+        skipButton.font = .systemFont(ofSize: 15, weight: .semibold)
         skipButton.keyEquivalent = ""
         skipButton.translatesAutoresizingMaskIntoConstraints = false
+        skipButton.isBordered = false
+        skipButton.contentTintColor = .black
+        skipButton.wantsLayer = true
+        skipButton.layer?.backgroundColor = NSColor.white.cgColor
+        skipButton.layer?.cornerRadius = 10
 
         let hint = NSTextField(labelWithString: "Press Esc twice to skip")
         hint.font = .systemFont(ofSize: 16)
@@ -76,6 +85,7 @@ final class OverlayWindowController: NSWindowController {
 
         [eye, title, countdownLabel, seconds, skipButton, hint].forEach(container.addSubview)
         window.contentView = container
+
         NSLayoutConstraint.activate([
             countdownLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             countdownLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor, constant: -5),
@@ -83,14 +93,18 @@ final class OverlayWindowController: NSWindowController {
             title.bottomAnchor.constraint(equalTo: countdownLabel.topAnchor, constant: -16),
             eye.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             eye.bottomAnchor.constraint(equalTo: title.topAnchor, constant: -16),
+            eye.widthAnchor.constraint(equalToConstant: 130),
+            eye.heightAnchor.constraint(equalToConstant: 75),
             seconds.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             seconds.topAnchor.constraint(equalTo: countdownLabel.bottomAnchor, constant: -4),
             skipButton.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             skipButton.topAnchor.constraint(equalTo: seconds.bottomAnchor, constant: 28),
             skipButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 180),
+            skipButton.heightAnchor.constraint(equalToConstant: 44),
             hint.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             hint.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 14)
         ])
+
         if isPrimary { window.makeKeyAndOrderFront(nil) }
     }
 
